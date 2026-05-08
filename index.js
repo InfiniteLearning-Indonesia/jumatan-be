@@ -82,7 +82,11 @@ if (process.env.NODE_ENV !== 'test') {
 // ── Global rate limiter ───────────────────────────────────────────────────────
 app.use('/api', apiLimiter);
 
-// ── Health check ──────────────────────────────────────────────────────────────
+// ── Health check & Root ────────────────────────────────────────────────────────
+app.get('/', (req, res) => {
+  res.send('Kas Jumatan API is online and running 🕌');
+});
+
 app.get('/health', (req, res) => {
   res.json({
     success: true,
