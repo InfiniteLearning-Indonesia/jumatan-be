@@ -1,0 +1,39 @@
+# Jumatan App - Backend
+
+- Desc : Sebuah aplikasi untuk pencatatan saldo infak Jum'at musola Infinite Learning
+- Data yang perlu dicatat : 
+    - Tanggal
+    - Jumlah infak QRIS
+    - Jumlah infak tunai
+    - Total infak
+    - Saldo total QRIS dan Tunai
+    - Saldo total QRIS saja
+    - Saldo total Tunai saja
+    - Saldo awal
+    - Saldo akhir
+    - Saldo currency lain
+- Fitur yang perlu :
+    - Input saldo awal
+    - Input saldo akhir
+    - Input jumlah infak QRIS
+    - Input jumlah infak tunai
+    - Input total infak
+    - Input saldo total QRIS dan Tunai
+    - Input saldo total QRIS saja
+    - Input saldo total Tunai saja
+    - Tampilkan saldo awal
+    - Tampilkan saldo akhir
+    - Tampilkan jumlah infak QRIS
+    - Tampilkan jumlah infak tunai
+    - Tampilkan total infak
+    - Tampilkan saldo total QRIS dan Tunai
+    - Tampilkan saldo total QRIS saja
+    - Tampilkan saldo total Tunai saja
+    - Fitur jika hari Jum'at libur / tidak diadakan solat Jum'at
+    - Pencatatan pengeluaran
+    - Pencatatan pemasukan
+    - Paginasi data
+    - Riwayat data
+    - Akun superadmin
+    - Penambahan akun admin / pengurus infak
+    - Input multi currency
