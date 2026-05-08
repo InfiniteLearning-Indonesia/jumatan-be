@@ -113,7 +113,7 @@ app.use((req, res) => {
 app.use(errorHandler);
 
 // ── Start server ──────────────────────────────────────────────────────────────
-const PORT = parseInt(process.env.PORT, 10) || 5000;
+const PORT = parseInt(process.env.PORT, 10) || 9870;
 
 const startServer = async () => {
   await connectDB();
