@@ -13,12 +13,13 @@ const signToken = (id) => {
 const sendToken = (user, statusCode, res) => {
   const token = signToken(user._id);
 
+  const isDev = process.env.NODE_ENV === 'development';
   // Send as HttpOnly cookie
   res.cookie('token', token, {
     expires: new Date(Date.now() + 7 * 24 * 60 * 60 * 1000), // 7 days
     httpOnly: true,
-    secure: process.env.NODE_ENV === 'production',
-    sameSite: process.env.NODE_ENV === 'production' ? 'none' : 'lax',
+    secure: !isDev,
+    sameSite: !isDev ? 'none' : 'lax',
   });
   res.status(statusCode).json({
     success: true,
@@ -66,11 +67,12 @@ const login = async (req, res, next) => {
  * GET /api/auth/logout
  */
 const logout = async (req, res, next) => {
+  const isDev = process.env.NODE_ENV === 'development';
   res.cookie('token', 'loggedout', {
     expires: new Date(Date.now() + 10 * 1000),
     httpOnly: true,
-    secure: process.env.NODE_ENV === 'production',
-    sameSite: process.env.NODE_ENV === 'production' ? 'none' : 'lax',
+    secure: !isDev,
+    sameSite: !isDev ? 'none' : 'lax',
   });
   res.status(200).json({ success: true, message: 'Logged out successfully' });
 };
